@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+<title>
+	Good Shepherd Christian Community
+</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="javascripts/jQuery-File-Upload-9.18.0/js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Bad+Script|Shadows+Into+Light|Farsan|Fredericka+the+Great|Yesteryear|Work+Sans|Cormorant+Garamond|Bubbler+One|Open+Sans" rel="stylesheet">
+<style>
+
+	header {
+		text-align: center;
+	}
+	img {
+	  width: 150px;
+	  height: 200px;
+      margin: 50px 0px 0px 0px;
+      border: 3px solid black;
+      border-radius: 20px;
+    }
+    body {
+		background: rgba(100,200,255,.4);
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(100,200,255,.7));
+	    background: -moz-linear-gradient(bottom, rgba(255,255,255,1), rgba(100,200,255,.4));
+		color: black;
+		font-family: 'Work Sans', serif;
+		margin: 0 auto;
+
+	}
+	h1 {
+		font-family: 'Yesteryear', cursive;
+		font-size:3.4em;
+		color: black;
+		text-align: center;
+		padding: 20px;
+		margin-top: -10px;
+	}
+	h2
+	{
+		font-family: 'Cormorant Garamond', sans-serif;
+		font-size: 1.9em;
+		text-align: center;
+		padding: -10px 0px 0px 0px;
+		margin-top: -60px;
+	}
+	h3
+	{
+		font-family: 'Bad Script', cursive;
+		margin-top: -20px;
+		margin-bottom: 90px;
+	}
+	h4
+	{
+		font-family: 'Work Sans', serif;
+		font-size: 0.8em;
+	}
+	.navbar
+	{
+		margin: -20px 0px 0px 250px;
+	}
+	button
+	{
+		font-family: 'Work Sans', serif;
+		font-size: 1em;
+		display: block;
+		margin: 0 auto;
+		background: white;
+		padding: 10px 20px 10px 20px;
+		margin-top: 40px;
+		border: 2px solid rgba(235,235,235,.4);
+      	border-radius: 5px;
+	}
+	ul
+	{
+		padding: 10px;
+		text-align: center;
+		margin-top: 40px;
+	}
+	li{
+		display: inline;
+		background: black;
+		padding: 15px 20px 15px 20px;
+		margin: 0px 20px 0px 0px;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	article
+	{
+		max-width: 500px;
+		padding: 20px;
+		margin: 0 auto;
+	}
+	small {
+		color: black;
+	}
+	.description 
+	{
+		transition: height .5s;
+  		-webkit-transition: height .5s;
+  		-moz-transition: height .5s;
+	}
+	#map {
+        width: 100%;
+        height: 400px;
+        background-color: white;
+        margin: 20px 0px 20px 0px;
+        z-index: -1;
+     }
+
+	@media (max-width: 920px) {
+		li {
+		display: block;
+		padding: 5px;
+		margin: 5px;
+		}
+	}
+
+</style>
+</head>
+<body>
+<header>
+	<a href="resources.html"><button class="login">Login</button></a>
+	<img src="/images/cross.jpg">
+	<h1>Good Shepherd</h1>
+	<h2>Christian Church</h2>
+	<h3>in the Silicon Valley</h3>
+	<nav class="navbar">
+		<ul class="nav">
+			<a href="#about"><li>About</li></a>
+			<a href="#beliefs"><li>Beliefs</li></a>
+			<a href="#pastor"><li>Pastor</li></a>
+			<a href="#childrens"><li>Children's Sunday School</li></a>
+			<a href="#school"><li>School</li></a>
+			<a href="#resources"><li>Resources</li></a>
+		</ul>
+	</nav>
+</header>
+	<article class="description" id="about">
+		About <br /><br />
+		<small>
+			Good Shepherd Christian is a young multi-generational church in the Silicon Valley. We welcome all to our Sunday service at 11:00 AM, located at 940 S. Stelling Rd. Cupertino, CA 95104.
+		</small> 
+		<div id="map"></div>
+	</article>
+	<article class="description" id="beliefs">
+		Beliefs <br /><br />
+		<small>
+			Good Shepherd Christian Church believes in the Apostle's Creed.
+		</small> 
+	</article>
+	<article class="description" id="pastor">
+		Pastor <br /><br />
+		<small>
+			Good Shepherd Christian Church is led by Pastor Joseph Chiu and his wife Jane Chiu. 
+		</small> 
+	</article>
+	<article class="description" id="childrens">
+		Children's Sunday School <br /><br />
+		<small>
+			Our children's sunday school takes place during the Sunday Service at 11 AM. We have separate classes for toddlers, preschoolers, and K-6.
+		</small> 
+	</article>
+	<article class="description" id="school">
+		School <br /><br />
+		<small>
+			Good Shepherd Christian School is a Preschool that will start in August 2017.<br /><br />
+			<a href="http://www.gsccschool.org">Go to our GSCC School page.</a>
+		</small> 
+	</article>
+	<article class="description" id="resources">
+		Resources <br /><br />
+		<h4>Sermons</h4>
+		<small>
+			Every Sunday our sermons are recorded for those who are not able to make it to the service. You may view these recordings on our Facebook page.<br /><br />
+			<a href="http://www.facebook.com/gscommunity/">Go to our Facebook page</a>
+		</small> 
+		<h4>Small Group Material</h4>
+	</article>
+   <script>
+      function initMap() {
+        var uluru = {lat: 37.311665, lng: -122.041046};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcUv2qzwTpHlMVJOKRnwzxH8cotQ5EgDY&callback=initMap">
+    </script>
+    <script src="javascripts/stickUp-master/stickUp.min.js"></script>
+    <script type="text/javascript">
+              jQuery(function($) {
+                $(document).ready( function() {
+                  //enabling stickUp on the '.navbar-wrapper' class
+                  $('.navbar').stickUp();
+                });
+              }); </script>
+              
+     </script>
+     <script>
+	  $(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {
+		    e.preventDefault();
+
+		    var target = this.hash;
+		    $target = $(target);
+
+		    $('html, body').stop().animate({
+		        'scrollTop': $target.offset().top
+		    }, 900, 'swing', function () {
+		        window.location.hash = target;
+		    });
+		});
+	});
+</script> 
+</body>
+</html>
+

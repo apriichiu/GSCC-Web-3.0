@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<title>Administration - Good Shepherd Christian Commmunity</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script type="text/javascript" src="javascripts/jQuery-File-Upload-9.18.0/js/jquery.fileupload.js"></script>
+<link href="fileupload.css" rel="stylsheet">
+<link href="https://fonts.googleapis.com/css?family=Bad+Script|Shadows+Into+Light|Farsan|Fredericka+the+Great|Yesteryear|Work+Sans|Cormorant+Garamond|Bubbler+One|Open+Sans" rel="stylesheet">
+<style>
+header
+{
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+}
+img{
+	height: 200px;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+h1
+{
+	font-family: 'Yesteryear', sans-serif;
+	color: black;
+}
+h2{
+	font-family: 'Work Sans', serif;
+}
+ul{
+
+}
+li{
+	font-family: 'Work Sans', serif;
+	background: white;
+	color: black;
+	display: inline;
+	padding: 10px 20px 10px 20px;
+}
+a{
+	text-decoration: none;
+}
+div
+{
+	text-align: left;
+	margin-left: 200px;
+}
+.forms{
+    font-family: 'Work Sans', serif;
+    font-size: 0.8em;
+	background: white;
+	color: red;
+	display: inline;
+	padding: 10px 20px 10px 20px;
+
+}
+</style>
+</head>
+<body>
+<header>
+<img src="images/grove.jpg">
+<h1>Administration</h1>
+<ul>
+	<a href="#finance"><li>Finance</li></a>
+	<a href="#smallgroupleaders"><li>Small Group Leaders</li></a>
+	<a href="#sundayschoolteachers"><li>Sunday School Teachers</li></a>
+<ul>
+</header>
+<div id="finance">
+	<h2>Finance Forms<h2>
+		<a href="forms/finance/expenses.pdf" class="forms">Reimbursement Form</a>
+</div>
+<div id="smallgroupleaders">
+	<h2>Small Group Questions<h2>
+    <button class="upload">Upload</button>
+    <ul class="filelist"></ul>
+
+</div>
+<div id="sundayschoolteachers">
+	<h2>Sunday School Material<h2>
+</div>
+<script>
+	var inputfilenames=[];
+	$('.upload').click(function() {
+		inputfilenames.push($(''))
+	})
+	$('.filelist').html('<a href="'+inputfilename+)
+</script>
+<script>
+/*jslint unparam: true */
+/*global window, $ */
+$(function () {
+    'use strict';
+    // Change this to the location of your server-side upload handler:
+    var url = window.location.hostname === 'blueimp.github.io' ?
+                '//jquery-file-upload.appspot.com/' : 'server/php/';
+    $('#fileupload').fileupload({
+        url: url,
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo('#files');
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+});
+</script>
+</body>
+</html>
