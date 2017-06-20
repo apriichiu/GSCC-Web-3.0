@@ -1,1 +1,2 @@
-javascripts/*
+public/javascripts/*
+node_modules/*
